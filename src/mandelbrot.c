@@ -15,6 +15,11 @@ static void		set_z_value(t_data *d)
 
 void			draw_mandelbrot(t_data *data)
 {
+	int		x;
+	int		y;
+
+	x = 0;
+	y = 0;
 	while (x < data->width)
 	{
 		while (y < data->height)
