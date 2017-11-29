@@ -25,4 +25,10 @@ int				print_usage(void);
 
 void			display_fractal(t_data *data);
 
+/*
+** check_input.c
+*/
+
+int				is_an_error_input(int ac, char *arg);
+
 #endif

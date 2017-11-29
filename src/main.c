@@ -4,7 +4,7 @@ int		main(int ac, char **av)
 {
 	t_data		*data;
 
-	if (is_an_error_input(ac, av))
+	if (is_an_error_input(ac, av[1]))
 		return (print_usage());
 	data = set_data_structure(av[1]);
 	display_fractal(data);
