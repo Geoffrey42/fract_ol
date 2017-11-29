@@ -8,7 +8,7 @@
 
 # ifdef __APPLE__
 #  include "mlx.h"
-#  define ESCAPE_KEY 53 
+#  define ESCAPE_KEY 53
 # endif
 
 # include <fcntl.h>

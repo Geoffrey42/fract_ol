@@ -36,7 +36,13 @@ void			draw_mandelbrot(t_data *d)
 		d->x++;
 	}
 	if (d->i == d->max_iteration)
+	{
+		ft_putendl("dessine pixel RED");
 		draw_pixel_in_image(d, RED);
+	}
 	else
+	{
+		ft_putendl("dessine pixel GREEN");
 		draw_pixel_in_image(d, GREEN);
+	}
 }
