@@ -13,11 +13,11 @@ static void		set_complex_number_value(t_data *d)
 {
 	int		tmp;
 
-	tmp = d->zr;
 	while ((d->zr * d->zr) + (d->zi * d->zi) < 4 && d->i < d->max_iteration)
 	{
+		tmp = d->zr;
 		d->zr = (d->zr * d->zr) - (d->zi * d->zi) + d->cr;
-		d->zi = 2 * d->zi * tmp + d->ci;
+		d->zi = 2 * tmp * d->zi + d->ci;
 		d->i++;
 	}
 }
