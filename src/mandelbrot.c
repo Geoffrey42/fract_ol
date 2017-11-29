@@ -24,6 +24,7 @@ static void		set_complex_number_value(t_data *d)
 
 void			draw_mandelbrot(t_data *d)
 {
+	ft_putendl("start draw_mandelbrot()");
 	while (d->x < d->width)
 	{
 		while (d->y < d->height)
@@ -32,17 +33,22 @@ void			draw_mandelbrot(t_data *d)
 			set_complex_number_value(d);
 			d->y++;
 		}
+		if (d->i == d->max_iteration)
+		{
+			ft_putendl("dessine pixel RED");
+			ft_putstr("x : ");
+			ft_putnbrdl(d->x);
+			ft_putstr("y : ");
+			ft_putnbrdl(d->y);
+			draw_pixel_in_image(d, RED);
+		}
+		else
+		{
+			ft_putendl("dessine pixel GREEN");
+			draw_pixel_in_image(d, GREEN);
+		}
 		d->y = 0;
 		d->x++;
 	}
-	if (d->i == d->max_iteration)
-	{
-		ft_putendl("dessine pixel RED");
-		draw_pixel_in_image(d, RED);
-	}
-	else
-	{
-		ft_putendl("dessine pixel GREEN");
-		draw_pixel_in_image(d, GREEN);
-	}
+	ft_putendl("end draw_mandelbrot()");
 }

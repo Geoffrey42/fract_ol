@@ -1,7 +1,12 @@
 #include "fractol.h"
 
+/*
+** This function manages t_data structure settings
+*/
+
 t_data		*set_data_structure(char *arg)
 {
+	ft_putendl("start set_data_structure()");
 	t_data	*new;
 
 	if (!(new = (t_data *)malloc(sizeof(t_data))))
@@ -18,10 +23,15 @@ t_data		*set_data_structure(char *arg)
 	new->max_iteration = 50;
 	new->width = (new->x2 - new->x1) * new->zoom;
 	new->height = (new->y2 - new->y1) * new->zoom;
+	ft_putstr("width : ");
+	ft_putnbrdl(new->width);
+	ft_putstr("height: ");
+	ft_putnbrdl(new->height);
 	new->fractal = ft_strdup(arg);
 	new->win = mlx_new_window(new->mlx, new->width, new->height, new->fractal);
 	new->image_id = mlx_new_image(new->mlx, new->width, new->height);
 	new->memory_area = mlx_get_data_addr(new->image_id, &new->bpp,\
 			&new->size_line, &new->endian);
+	ft_putendl("end set_data_structure()");
 	return (new);
 }
