@@ -14,6 +14,7 @@ NAME= fractol
 SRC= src/mandelbrot.c \
 	 src/data_structure.c \
 	 src/delete_utils.c \
+	 src/fractal.c \
 	 src/main.c
 CC= gcc
 CFLAGS= -Wall -Werror -Wextra
