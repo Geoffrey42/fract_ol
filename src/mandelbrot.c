@@ -9,28 +9,23 @@ static void		set_z_value(t_data *d)
 	{
 		d->zr = (d->zr * d->zr) - (d->zi * d->zi) + d->cr;
 		d->zi = 2 * d->zi * tmp + d->ci;
-		i++;
+		d->i++;
 	}
 }
 
-void			draw_mandelbrot(t_data *data)
+void			draw_mandelbrot(t_data *d)
 {
-	int		x;
-	int		y;
-
-	x = 0;
-	y = 0;
-	while (x < data->width)
+	while (d->x < d->width)
 	{
-		while (y < data->height)
+		while (d->y < d->height)
 		{
-			set_z_value(data);
-			y++;
+			set_z_value(d);
+			d->y++;
 		}
-		x++;
+		d->x++;
 	}
-	if (data->i == data->max_iteration)
-		draw_pixel_in_image(data, RED);
+	if (d->i == d->max_iteration)
+		draw_pixel_in_image(d, RED);
 	else
-		draw_pixel_in_image(data, GREEN);
+		draw_pixel_in_image(d, GREEN);
 }

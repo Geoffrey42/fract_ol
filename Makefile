@@ -15,6 +15,7 @@ SRC= src/mandelbrot.c \
 	 src/data_structure.c \
 	 src/delete_utils.c \
 	 src/display_utils.c \
+	 src/draw_pixel.c \
 	 src/fractal.c \
 	 src/main.c
 CC= gcc

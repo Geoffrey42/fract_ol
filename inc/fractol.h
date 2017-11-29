@@ -16,6 +16,14 @@
 # include "libft.h"
 
 # define FRACTALS mandelbrot
+# define PINK 0x00FF358B
+# define WHITE 0x00FFFFFF
+# define RED 0x008E3557
+# define BLUE 0x004BB5C1
+# define BROWN 0x00BD8D46
+# define GREEN 0x0096CA2D
+# define ORANGE 0x00FEB201
+# define YELLOW 0x00F2E203
 
 typedef struct	s_data
 {
@@ -26,6 +34,9 @@ typedef struct	s_data
 	char		*map_cpy;
 	char		*fractal;
 	int			bpp;
+	int			size_line;
+	int			x;
+	int			y;
 	int			x1;
 	int			x2;
 	int			y1;
@@ -58,6 +69,12 @@ void			delete_data(t_data **data);
 */
 
 int				print_usage(void);
+
+/*
+** draw_pixel.c
+*/
+
+int				draw_pixel_in_image(t_data *data, int color);
 
 /*
 ** fractal.c

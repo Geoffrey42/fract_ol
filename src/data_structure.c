@@ -7,6 +7,8 @@ t_data		*set_data_structure(char *arg)
 	if (!(new = (t_data *)malloc(sizeof(t_data))))
 		return (NULL);
 	new->mlx = mlx_init();
+	new->x = 0;
+	new->y = 0;
 	new->x1 = -2.1;
 	new->x2 = 0.6;
 	new->y1 = -1.2;
