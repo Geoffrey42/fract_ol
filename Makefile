@@ -11,7 +11,10 @@
 # **************************************************************************** #
 
 NAME= fractol
-SRC= src/main.c
+SRC= src/mandelbrot.c \
+	 src/data_structure.c \
+	 src/delete_utils.c \
+	 src/main.c
 CC= gcc
 CFLAGS= -Wall -Werror -Wextra
 OBJ= $(SRC:.c=.o)
