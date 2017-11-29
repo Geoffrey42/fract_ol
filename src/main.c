@@ -8,6 +8,7 @@ int		main(int ac, char **av)
 		return (print_usage());
 	data = set_data_structure(av[1]);
 	display_fractal(data);
+	display_image_in_window(data);
 	delete_data(&data);
 	return (0);
 }

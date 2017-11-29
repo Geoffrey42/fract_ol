@@ -1,6 +1,15 @@
 #include "fractol.h"
 
-static void		set_z_value(t_data *d)
+static void		reset_complex_values(t_data *d)
+{
+	d->cr = d->x / d->zoom + d->x1;
+	d->cr = d->y / d->zoom + d->y1;
+	d->zr = 0;
+	d->zi = 0;
+	d->i = 0;
+}
+
+static void		set_complex_number_value(t_data *d)
 {
 	int		tmp;
 
@@ -19,7 +28,8 @@ void			draw_mandelbrot(t_data *d)
 	{
 		while (d->y < d->height)
 		{
-			set_z_value(d);
+			reset_complex_values(d);
+			set_complex_number_value(d);
 			d->y++;
 		}
 		d->x++;

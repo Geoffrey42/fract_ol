@@ -9,11 +9,13 @@ t_data		*set_data_structure(char *arg)
 	new->mlx = mlx_init();
 	new->x = 0;
 	new->y = 0;
+	new->i = 0;
 	new->x1 = -2.1;
 	new->x2 = 0.6;
 	new->y1 = -1.2;
 	new->y2 = 1.2;
 	new->zoom = 100;
+	new->max_iteration = 50;
 	new->width = (new->x2 - new->x1) * new->zoom;
 	new->height = (new->y2 - new->y1) * new->zoom;
 	new->fractal = ft_strdup(arg);
