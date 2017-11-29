@@ -13,6 +13,9 @@
 NAME= fractol
 SRC= src/mandelbrot.c \
 	 src/data_structure.c \
+	 src/events.c \
+	 src/window.c \
+	 src/check_input.c \
 	 src/delete_utils.c \
 	 src/display_utils.c \
 	 src/draw_pixel.c \

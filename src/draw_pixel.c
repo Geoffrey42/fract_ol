@@ -1,6 +1,6 @@
 #include "fractol.h"
 
-int		draw_pixel_in_image(t_data *data, int color)
+int		draw_pixel_in_image(t_data *d, int color)
 {
 	int		size;
 

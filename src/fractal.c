@@ -1,13 +1,13 @@
 #include "fractol.h"
 
-static char		**create_fractals_array(void)
+char		**create_fractals_array(void)
 {
 	return (ft_strsplit("mandelbrot", ','));
 }
 
-void			display_fractal(t_data *data)
+void		display_fractal(t_data *data)
 {
-	static int	(*display_fractal[])(t_data *) = {FRACTALS};
+	static void	(*display_fractal[])(t_data *) = {FRACTALS};
 	char		**fractals;
 	int			i;
 

@@ -1,4 +1,4 @@
-#include "fractol.c"
+#include "fractol.h"
 
 int		print_usage(void)
 {

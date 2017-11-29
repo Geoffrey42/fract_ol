@@ -15,7 +15,7 @@
 # include <math.h>
 # include "libft.h"
 
-# define FRACTALS mandelbrot
+# define FRACTALS &draw_mandelbrot
 # define PINK 0x00FF358B
 # define WHITE 0x00FFFFFF
 # define RED 0x008E3557
@@ -33,15 +33,16 @@ typedef struct	s_data
 	char		*memory_area;
 	char		*map_cpy;
 	char		*fractal;
+	double		x1;
+	double		x2;
+	double		y1;
+	double		y2;
+	double		width;
+	int			endian;
 	int			bpp;
 	int			size_line;
 	int			x;
 	int			y;
-	int			x1;
-	int			x2;
-	int			y1;
-	int			y2;
-	int			width;
 	int			height;
 	int			zoom;
 	int			max_iteration;
@@ -77,10 +78,31 @@ int				print_usage(void);
 int				draw_pixel_in_image(t_data *data, int color);
 
 /*
+** mandelbrot.c
+*/
+
+void			draw_mandelbrot(t_data *d);
+
+/*
 ** fractal.c
 */
 
+char			**create_fractals_array(void);
 void			display_fractal(t_data *data);
+
+/*
+** events.c
+*/
+
+int				check_key(int keycode, t_data *data);
+int				close_button_is_clicked(t_data *data);
+int				escape_key_is_pressed(t_data *data);
+
+/*
+** window.c
+*/
+
+void			display_image_in_window(t_data *data);
 
 /*
 ** check_input.c

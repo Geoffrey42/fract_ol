@@ -1,28 +1,21 @@
 #include "fractol.h"
 
-static size_t	get_array_char_size(char **fractals)
-{
-	size_t	size;
-
-	size = 0;
-	while (fractals[size])
-		size++;
-	return (size);
-}
-
 static int		is_not_registered_fractal(char *arg)
 {
 	int		i;
 	int		missing;
+	char	**fractals;
 
 	i = 0;
-	missing = 0;
+	missing = 1;
+	fractals = create_fractals_array();
 	while (fractals[i])
 	{
 		if (!(ft_strcmp(arg, fractals[i])))
-			missing = 1;
+			missing = 0;
 		i++;
 	}
+	erase_char_array(fractals);
 	return (missing);
 }
 
