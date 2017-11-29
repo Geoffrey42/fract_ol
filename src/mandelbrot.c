@@ -24,31 +24,19 @@ static void		set_complex_number_value(t_data *d)
 
 void			draw_mandelbrot(t_data *d)
 {
-	ft_putendl("start draw_mandelbrot()");
 	while (d->x < d->width)
 	{
 		while (d->y < d->height)
 		{
 			reset_complex_values(d);
 			set_complex_number_value(d);
+			if (d->i == d->max_iteration)
+				draw_pixel_in_image(d, RED);
+			else
+				draw_pixel_in_image(d, GREEN);
 			d->y++;
-		}
-		if (d->i == d->max_iteration)
-		{
-			ft_putendl("dessine pixel RED");
-			ft_putstr("x : ");
-			ft_putnbrdl(d->x);
-			ft_putstr("y : ");
-			ft_putnbrdl(d->y);
-			draw_pixel_in_image(d, RED);
-		}
-		else
-		{
-			ft_putendl("dessine pixel GREEN");
-			draw_pixel_in_image(d, GREEN);
 		}
 		d->y = 0;
 		d->x++;
 	}
-	ft_putendl("end draw_mandelbrot()");
 }
