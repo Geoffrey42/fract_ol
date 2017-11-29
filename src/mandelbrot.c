@@ -32,6 +32,7 @@ void			draw_mandelbrot(t_data *d)
 			set_complex_number_value(d);
 			d->y++;
 		}
+		d->y = 0;
 		d->x++;
 	}
 	if (d->i == d->max_iteration)
