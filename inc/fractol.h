@@ -14,6 +14,7 @@
 # include <fcntl.h>
 # include <math.h>
 # include "libft.h"
+# include <complex.h>
 
 # define HEIGHT 500
 # define WIDTH 500
@@ -40,18 +41,18 @@ typedef struct	s_data
 	double		y1;
 	double		y2;
 	double		width;
+	double		height;
 	int			endian;
 	int			bpp;
 	int			size_line;
 	int			x;
 	int			y;
-	int			height;
-	int			zoom;
-	int			max_iteration;
-	int			cr;
-	int			ci;
-	int			zr;
-	int			zi;
+	double		zoom;
+	double		max_iteration;
+	double		cr;
+	double		ci;
+	double		zr;
+	double		zi;
 	int			i;
 	int			color;
 }				t_data;

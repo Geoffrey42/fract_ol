@@ -11,7 +11,7 @@ static void		reset_complex_values(t_data *d)
 
 static void		set_complex_number_value(t_data *d)
 {
-	int		tmp;
+	double	tmp;
 
 	while ((d->zr * d->zr) + (d->zi * d->zi) < 4 && d->i < d->max_iteration)
 	{
