@@ -102,7 +102,7 @@ void			display_fractal(t_data *data);
 ** zoom_event.c
 */
 
-int				check_mouse_scroll(int mousecode, t_data *data);
+void			wait_for_mouse_wheel_to_be_scrolled(t_data *data);
 
 /*
 ** close_events.c
@@ -118,6 +118,12 @@ void			wait_for_cross_button_to_be_clicked(t_data *data);
 */
 
 void			display_image_in_window(t_data *data);
+
+/*
+** check_limits.c
+*/
+
+int				is_not_beyond_limits(t_data *data);
 
 /*
 ** check_input.c

@@ -6,7 +6,7 @@
 #    By: ggane <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/04 11:16:35 by ggane             #+#    #+#              #
-#    Updated: 2017/11/30 17:13:20 by ggane            ###   ########.fr        #
+#    Updated: 2017/11/30 17:58:29 by ggane            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ SRC= src/mandelbrot.c \
 	 src/zoom_event.c \
 	 src/window.c \
 	 src/check_input.c \
+	 src/check_limits.c \
 	 src/delete_utils.c \
 	 src/display_utils.c \
 	 src/draw_pixel.c \
