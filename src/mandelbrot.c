@@ -3,7 +3,7 @@
 static void		reset_complex_values(t_data *d)
 {
 	d->cr = d->x / d->zoom + d->x1;
-	d->cr = d->y / d->zoom + d->y1;
+	d->ci = d->y / d->zoom + d->y1;
 	d->zr = 0;
 	d->zi = 0;
 	d->i = 0;
