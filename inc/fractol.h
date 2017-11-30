@@ -65,6 +65,7 @@ typedef struct	s_data
 ** data_structure.c
 */
 
+void			get_memory_area(t_data *data);
 t_data			*set_data_structure(char *arg);
 
 /*

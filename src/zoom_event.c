@@ -32,7 +32,7 @@ static int		check_mouse_scroll(int mousecode, t_data *data)
 		set_scroll_down_limits(data);
 	ft_bzero(data->memory_area, HEIGHT * WIDTH * 4);
 	display_fractal(data);
-	mlx_put_image_to_window(data->mlx, data->win, data->image_id, 0, 0);
+	//mlx_put_image_to_window(data->mlx, data->win, data->image_id, 0, 0);
 	return (0);
 }
 

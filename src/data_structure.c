@@ -4,6 +4,12 @@
 ** This function manages t_data structure settings
 */
 
+void		get_memory_area(t_data *data)
+{
+	data->memory_area = mlx_get_data_addr(data->image_id, &data->bpp,\
+			&data->size_line, &data->endian);
+}
+
 t_data		*set_data_structure(char *arg)
 {
 	t_data	*new;
@@ -23,12 +29,9 @@ t_data		*set_data_structure(char *arg)
 	new->color = rand();
 	new->width = (new->x2 - new->x1) * new->zoom;
 	new->height = (new->y2 - new->y1) * new->zoom;
-	new->width = (new->x2 - new->x1) * new->zoom;
-	new->height = (new->y2 - new->y1) * new->zoom;
 	new->fractal = ft_strdup(arg);
 	new->win = mlx_new_window(new->mlx, WIDTH, HEIGHT, new->fractal);
 	new->image_id = mlx_new_image(new->mlx, WIDTH, HEIGHT);
-	new->memory_area = mlx_get_data_addr(new->image_id, &new->bpp,\
-			&new->size_line, &new->endian);
+	get_memory_area(new);
 	return (new);
 }
