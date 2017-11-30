@@ -6,14 +6,15 @@
 #    By: ggane <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/06/04 11:16:35 by ggane             #+#    #+#              #
-#    Updated: 2017/11/17 02:21:16 by ggane            ###   ########.fr        #
+#    Updated: 2017/11/30 17:13:20 by ggane            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME= fractol
 SRC= src/mandelbrot.c \
 	 src/data_structure.c \
-	 src/events.c \
+	 src/close_events.c \
+	 src/zoom_event.c \
 	 src/window.c \
 	 src/check_input.c \
 	 src/delete_utils.c \

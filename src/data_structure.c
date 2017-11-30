@@ -14,17 +14,10 @@ t_data		*set_data_structure(char *arg)
 	new->x = 0;
 	new->y = 0;
 	new->i = 0;
-	/*
-	new->x1 = -2.1;
-	new->x2 = 0.6;
-	new->y1 = -1.2;
-	new->y2 = 1.2;
-	new->zoom = 100;
-	*/
-	new->x1 = -2;
-	new->x2 = 2;
-	new->y1 = -2;
-	new->y2 = 2;
+	new->x1 = FRACTAL_MINIMAL_LIMIT;
+	new->x2 = FRACTAL_MAXIMAL_LIMIT;
+	new->y1 = FRACTAL_MINIMAL_LIMIT;
+	new->y2 = FRACTAL_MAXIMAL_LIMIT;
 	new->zoom = 125;
 	new->max_iteration = 50;
 	new->color = rand();

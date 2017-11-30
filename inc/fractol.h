@@ -9,6 +9,8 @@
 # ifdef __APPLE__
 #  include "mlx.h"
 #  define ESCAPE_KEY 53
+#  define SCROLL_UP 4
+#  define SCROLL_DOWN 5
 # endif
 
 # include <fcntl.h>
@@ -16,9 +18,11 @@
 # include "libft.h"
 # include <complex.h>
 
+# define FRACTALS &draw_mandelbrot
 # define HEIGHT 500
 # define WIDTH 500
-# define FRACTALS &draw_mandelbrot
+# define FRACTAL_MINIMAL_LIMIT -2
+# define FRACTAL_MAXIMAL_LIMIT 2
 # define PINK 0x00FF358B
 # define WHITE 0x00FFFFFF
 # define RED 0x008E3557
@@ -95,12 +99,19 @@ char			**create_fractals_array(void);
 void			display_fractal(t_data *data);
 
 /*
-** events.c
+** zoom_event.c
 */
 
-int				check_key(int keycode, t_data *data);
+int				check_mouse_scroll(int mousecode, t_data *data);
+
+/*
+** close_events.c
+*/
+
 int				close_button_is_clicked(t_data *data);
 int				escape_key_is_pressed(t_data *data);
+void			wait_for_escape_key_to_be_pressed(t_data *data);
+void			wait_for_cross_button_to_be_clicked(t_data *data);
 
 /*
 ** window.c
