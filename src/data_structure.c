@@ -20,6 +20,7 @@ t_data		*set_data_structure(char *arg)
 	new->y2 = 1.2;
 	new->zoom = 100;
 	new->max_iteration = 50;
+	new->color = rand();
 	new->width = (new->x2 - new->x1) * new->zoom;
 	new->height = (new->y2 - new->y1) * new->zoom;
 	new->fractal = ft_strdup(arg);

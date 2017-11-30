@@ -15,6 +15,8 @@
 # include <math.h>
 # include "libft.h"
 
+# define HEIGHT 500
+# define WIDTH 500
 # define FRACTALS &draw_mandelbrot
 # define PINK 0x00FF358B
 # define WHITE 0x00FFFFFF
@@ -51,6 +53,7 @@ typedef struct	s_data
 	int			zr;
 	int			zi;
 	int			i;
+	int			color;
 }				t_data;
 
 /*

@@ -4,6 +4,8 @@ int		draw_pixel_in_image(t_data *d, int color)
 {
 	int		size;
 
+	if (d->x >= HEIGHT || d->y >= WIDTH || d->x <= 0 || d->y <= 0)
+				return (-1);
 	if (d->endian == 0)
 	{
 		size = ((d->y * d->size_line) + (d->x * d->bpp / 8));

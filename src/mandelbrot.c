@@ -17,7 +17,7 @@ static void		set_complex_number_value(t_data *d)
 	{
 		tmp = d->zr;
 		d->zr = (d->zr * d->zr) - (d->zi * d->zi) + d->cr;
-		d->zi = 2 * tmp * d->zi + d->ci;
+		d->zi = 2 * d->zi * tmp + d->ci;
 		d->i++;
 	}
 }
