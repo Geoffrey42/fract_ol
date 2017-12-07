@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   zoom_event.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/07 15:49:27 by ggane             #+#    #+#             */
+/*   Updated: 2017/12/07 15:49:41 by ggane            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 static void		set_scroll_up_limits(t_data *data)
@@ -32,7 +44,6 @@ static int		check_mouse_scroll(int mousecode, t_data *data)
 		set_scroll_down_limits(data);
 	ft_bzero(data->memory_area, HEIGHT * WIDTH * 4);
 	display_fractal(data);
-	//mlx_put_image_to_window(data->mlx, data->win, data->image_id, 0, 0);
 	return (0);
 }
 
