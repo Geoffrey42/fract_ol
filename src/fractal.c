@@ -6,7 +6,7 @@
 /*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 15:49:07 by ggane             #+#    #+#             */
-/*   Updated: 2017/12/07 15:49:11 by ggane            ###   ########.fr       */
+/*   Updated: 2018/02/09 13:15:30 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char		**create_fractals_array(void)
 	return (ft_strsplit("mandelbrot", ','));
 }
 
-void		display_fractal(t_data *data)
+void		draw_fractal(t_data *data)
 {
 	static void	(*display_fractal[])(t_data *) = {FRACTALS};
 	char		**fractals;

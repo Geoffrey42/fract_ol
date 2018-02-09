@@ -6,7 +6,7 @@
 /*   By: ggane <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/07 15:50:09 by ggane             #+#    #+#             */
-/*   Updated: 2017/12/07 15:50:11 by ggane            ###   ########.fr       */
+/*   Updated: 2018/02/09 13:12:43 by ggane            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void			draw_mandelbrot(t_data *d);
 */
 
 char			**create_fractals_array(void);
-void			display_fractal(t_data *data);
+void			draw_fractal(t_data *data);
 
 /*
 ** zoom_event.c
